@@ -175,3 +175,14 @@ print(f"{'XGBoost SMOTE 阈值=0.25':<30} {'0.8642':<10} {'0.5132':<10} {'0.4693
 print(f"{'XGBoost 调优 阈值={:.2f}'.format(best_t):<30} "
       f"{accuracy_score(y_test, y_pred_best):<10.4f} {recall_score(y_test, y_pred_best):<10.4f} "
       f"{f1_score(y_test, y_pred_best):<10.4f} {roc_auc_score(y_test, y_prob):<10.4f}")
+#保存最优模型
+import joblib
+
+
+joblib.dump(best_model, 'xgboost_best_model.pkl')
+
+# 保存预处理器（预测新数据时也要用同样的预处理）
+joblib.dump(preprocessor, 'preprocessor.pkl')
+
+print("模型已保存: xgboost_best_model.pkl")
+print("预处理器已保存: preprocessor.pkl")
