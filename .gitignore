@@ -1,0 +1,14 @@
+# Python 虚拟环境（几千个包文件，不需要传）
+.venv/
+
+# PyCharm 配置文件（别人的 IDE 设置跟你不一样）
+.idea/
+
+# Python 运行时生成的缓存
+__pycache__/
+*.pyc
+
+# 原始压缩包（有 bank_marketing.csv 就够了）
+bank.zip
+bank-additional.zip
+__MACOSX/
